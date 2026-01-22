@@ -200,23 +200,26 @@ Feel free to fork this project and add more features like:
 ---
 ##  Project Screenshots
 
-Below are some screenshots showcasing the functionality and UI of the **Student Database Management System**:
-
 ###  Home Page
-![Home Page](<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c142dc44-7dfa-4542-a3bf-1fe340d7e9a6" />
-)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c142dc44-7dfa-4542-a3bf-1fe340d7e9a6" width="800"/>
+</p>
 
 ###  Add Student Form
-![Add Student](<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/9e6c44ce-0a1d-43cc-895f-c754b3e6b80e" />
-)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9e6c44ce-0a1d-43cc-895f-c754b3e6b80e" width="800"/>
+</p>
 
 ###  Students List
-![Students List](<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/58996919-a9d4-4657-8744-67500efb5b53" />
-)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/58996919-a9d4-4657-8744-67500efb5b53" width="800"/>
+</p>
 
 ###  Edit Student Page
-![Edit Student](<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1cf99145-099c-4a5e-9b90-9dd6d413cfce" />
-)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1cf99145-099c-4a5e-9b90-9dd6d413cfce" width="800"/>
+</p>
+
 
 
 ##  Future Improvements
@@ -237,6 +240,7 @@ Below are some screenshots showcasing the functionality and UI of the **Student 
 
 🔗 **GitHub:** https://github.com/Harshita2211  
 🔗 **LinkedIn:** https://www.linkedin.com/in/harshita-gupta-247774334/
+
 
 
 
