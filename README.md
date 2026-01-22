@@ -2,7 +2,7 @@
 
 A complete demo project showing how to connect Node.js, Express, and EJS to a PostgreSQL database for managing student records.
 
-## 🚀 Features
+##  Features
 
 - **Full CRUD Operations**: Create, Read, Update, and Delete student records
 - **Modern UI**: Beautiful, responsive interface built with EJS templates
@@ -10,7 +10,7 @@ A complete demo project showing how to connect Node.js, Express, and EJS to a Po
 - **Express.js Backend**: RESTful API endpoints
 - **EJS Templating**: Server-side rendering with dynamic views
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -18,7 +18,7 @@ Before you begin, ensure you have the following installed:
 - **PostgreSQL** (v12 or higher) - [Download](https://www.postgresql.org/download/)
 - **npm** (comes with Node.js)
 
-## 🛠️ Installation Steps
+##  Installation Steps
 
 ### 1. Install PostgreSQL
 
@@ -78,7 +78,7 @@ DB_PASSWORD=your_password_here
 PORT=3000
 ```
 
-## 🎯 Running the Application
+##  Running the Application
 
 ### Start the Server
 
@@ -99,7 +99,7 @@ Open your browser and navigate to:
 http://localhost:3000
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 PG_DB/
@@ -117,7 +117,7 @@ PG_DB/
 └── README.md              # This file
 ```
 
-## 🔧 API Endpoints
+##  API Endpoints
 
 | Method | Route | Description |
 |--------|-------|-------------|
@@ -127,7 +127,7 @@ PG_DB/
 | POST | `/students/:id/update` | Update student |
 | POST | `/students/:id/delete` | Delete student |
 
-## 💡 Usage Examples
+##  Usage Examples
 
 ### Adding a Student
 
@@ -146,7 +146,7 @@ PG_DB/
 1. Click "Delete" button next to any student
 2. Confirm the deletion
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Connection Error
 
@@ -168,7 +168,7 @@ If you get module errors:
 - Run `npm install` again
 - Delete `node_modules` and `package-lock.json`, then run `npm install`
 
-## 📚 Learning Resources
+##  Learning Resources
 
 This project demonstrates:
 - **Express.js**: Web framework for Node.js
@@ -177,18 +177,18 @@ This project demonstrates:
 - **pg library**: PostgreSQL client for Node.js
 - **RESTful API**: Standard HTTP methods for CRUD operations
 
-## 🔐 Security Notes
+##  Security Notes
 
 - Never commit `.env` file to version control
 - Use environment variables for sensitive data
 - In production, use connection pooling and prepared statements (already implemented)
 - Consider adding authentication and authorization
 
-## 📝 License
+##  License
 
 This is a demo project for educational purposes.
 
-## 🤝 Contributing
+##  Contributing
 
 Feel free to fork this project and add more features like:
 - Search functionality
@@ -198,6 +198,45 @@ Feel free to fork this project and add more features like:
 - Authentication system
 
 ---
+##  Project Screenshots
 
-**Happy Learning! 🎓**
+Below are some screenshots showcasing the functionality and UI of the **Student Database Management System**:
+
+###  Home Page
+![Home Page](<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c142dc44-7dfa-4542-a3bf-1fe340d7e9a6" />
+)
+
+###  Add Student Form
+![Add Student](<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/9e6c44ce-0a1d-43cc-895f-c754b3e6b80e" />
+)
+
+###  Students List
+![Students List](<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/58996919-a9d4-4657-8744-67500efb5b53" />
+)
+
+###  Edit Student Page
+![Edit Student](<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1cf99145-099c-4a5e-9b90-9dd6d413cfce" />
+)
+
+
+##  Future Improvements
+
+-  Complete **Edit and Update** functionality  
+-  Complete **Delete** functionality  
+-  **Input Validation**: Add server-side and client-side checks  
+-  **UI/UX Enhancement**: Transition to Bootstrap or Tailwind CSS  
+-  **Search Bar**: Implement real-time filtering by name or course  
+
+---
+
+##  Author
+
+**Harshita Gupta**  
+ Delhi, India  
+ IT Engineering Student  
+
+🔗 **GitHub:** https://github.com/Harshita2211  
+🔗 **LinkedIn:** https://www.linkedin.com/in/harshita-gupta-247774334/
+
+
 
