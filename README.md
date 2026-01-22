@@ -71,6 +71,27 @@ PORT=3000
 5️⃣ Run the Server
 node server.js
 ```
+##  Project Structure
+
+```text
+students-database/
+│
+├── db/
+│   └── connection.js        # PostgreSQL database connection
+│
+├── views/
+│   ├── index.ejs            # Home page (list & add students)
+│   └── edit.ejs             # Edit student details
+│
+├── public/
+│   └── styles.css           # CSS styling
+│
+├── .env                     # Environment variables
+├── server.js                # Main Express server
+├── package.json             # Project dependencies
+└── README.md                # Project documentation
+```
+
 ##  API Routes
 
 | Method | Route           | Description                |
