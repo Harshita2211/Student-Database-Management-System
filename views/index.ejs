@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Students Database Demo</title>
+
+</head>
+<body>
+    <div class="container-index">
+        <header>
+            <h1>📚 Students Database Demo</h1>
+            <p>Node.js + Express + EJS + PostgreSQL</p>
+        </header>
+        
+        <main>
+        <div class="form-section">
+            <h2>Add New Student</h2>
+            <form action="/students" method="POST" aria-label="Add new student">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Course:</label>
+                        <select id="course" name="course" required>
+                            <option value="">Select Course</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Biology">Biology</option>
+                            <option value="Engineering">Engineering</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Add Student</button>
+            </form>
+        </div>
+        
+        <div class="table-section">
+            <h2>All Students</h2>
+            <% if (message) { %>
+                <div class="message" role="status" aria-live="polite"><%= message %></div>
+            <% } %>
+            
+            <% if (students && students.length > 0) { %>
+                <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Course</th>
+                            <th>Actions <span class="sr-only">column</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% students.forEach(student => { %>
+                            <tr>
+                                <td><%= student.id %></td>
+                                <td><%= student.name %></td>
+                                <td><%= student.email %></td>
+                                <td><%= student.age %></td>
+                                <td><%= student.course %></td>
+                                <td>
+                                    <div class="actions">
+                                        <a href="/students/<%= student.id %>" class="btn btn-small btn-edit" aria-label="View or edit <%= student.name %>">View / Edit</a>
+                                        <form action="/students/<%= student.id %>/delete" method="POST" style="display: inline;">
+                                            <button type="submit" class="btn btn-small btn-delete" aria-label="Delete <%= student.name %>" onclick="return confirm('Are you sure?')">Delete</button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+                </div>
+            <% } else { %>
+                <div class="empty-state">
+                    <p>No students found. Add your first student above!</p>
+                </div>
+            <% } %>
+        </div>
+        </main>
+    </div>
+</body>
+</html>
+

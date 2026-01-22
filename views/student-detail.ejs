@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Student Details - <%= student.name %></title>
+       
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Edit Student</h1>
+        </header>
+        
+        <main class="content">
+            <form action="/students/<%= student.id %>/update" method="POST" aria-label="Edit student details">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="<%= student.name %>" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="<%= student.email %>" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" value="<%= student.age %>" min="1" max="100" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="Computer Science" <%= student.course === 'Computer Science' ? 'selected' : '' %>>Computer Science</option>
+                        <option value="Mathematics" <%= student.course === 'Mathematics' ? 'selected' : '' %>>Mathematics</option>
+                        <option value="Physics" <%= student.course === 'Physics' ? 'selected' : '' %>>Physics</option>
+                        <option value="Chemistry" <%= student.course === 'Chemistry' ? 'selected' : '' %>>Chemistry</option>
+                        <option value="Biology" <%= student.course === 'Biology' ? 'selected' : '' %>>Biology</option>
+                        <option value="Engineering" <%= student.course === 'Engineering' ? 'selected' : '' %>>Engineering</option>
+                    </select>
+                </div>
+                
+                <div class="actions">
+                    <button type="submit" class="btn">Update Student</button>
+                    <a href="/" class="btn btn-secondary" aria-label="Back to student list">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

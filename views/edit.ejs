@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Edit Student - Students Database Demo</title>
+</head>
+<body>
+    <div class="container-index">
+        <header>
+            <h1>📚 Students Database Demo</h1>
+            <p>Node.js + Express + EJS + PostgreSQL</p>
+        </header>
+        
+        <main>
+            <div class="form-section">
+                <h2>Edit Student</h2>
+                <form action="/students/<%= student.id %>?_method=PUT" method="POST" aria-label="Edit student">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" value="<%= student.name %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" value="<%= student.email %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age:</label>
+                            <input type="number" id="age" name="age" min="1" max="100" value="<%= student.age %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course:</label>
+                            <select id="course" name="course" required>
+                                <option value="">Select Course</option>
+                                <option value="Computer Science" <% if(student.course === 'Computer Science') { %>selected<% } %>>Computer Science</option>
+                                <option value="Mathematics" <% if(student.course === 'Mathematics') { %>selected<% } %>>Mathematics</option>
+                                <option value="Physics" <% if(student.course === 'Physics') { %>selected<% } %>>Physics</option>
+                                <option value="Chemistry" <% if(student.course === 'Chemistry') { %>selected<% } %>>Chemistry</option>
+                                <option value="Biology" <% if(student.course === 'Biology') { %>selected<% } %>>Biology</option>
+                                <option value="Engineering" <% if(student.course === 'Engineering') { %>selected<% } %>>Engineering</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Update Student</button>
+                        <a href="/" class="btn" style="background-color: #6c757d;">Back To List</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
